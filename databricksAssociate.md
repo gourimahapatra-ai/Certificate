@@ -44,7 +44,7 @@
   <li>Unity Catalog</li>
   <li>Catalog</li>
   <li>Schema, Table, View, Volume</li>
-  <li>Delta Table</li>
+  <li>Delta Table/ Table</li><ol><li>Managed</li><li>External</li><li>Foreign</li><li>Temporary</li></ol>
   <li>Catalog Explorer</li>
   <li>DBFS root</li>
   <li>Cluster</li>
@@ -90,15 +90,15 @@
 #### 19. dfRenamedColumn.printSchema()
 #### 20. df.write.mode("overwrite").saveAsTable(f"{path_table}" + "." + f"{table_name}")
 #### 21. MCP Server.
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10.
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10.
+#### 22. Unity Catalog vs. legacy Hive metastore
+#### 23. Catalog types  : Standard catalog : Foreign catalog(Lakehouse Federation scenarios.)
+#### 24. Workspace-catalog binding
+#### 25. DROP SCHEMA inventory_schema CASCADE
+#### 26. Volumes : When you work with volumes, you must use a SQL warehouse or a cluster running Databricks Runtime
+#### 27. 
+#### 28. 
+#### 29. 
+#### 30.
 #### 10. 
 #### 10. 
 #### 10. 
