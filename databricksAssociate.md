@@ -45,7 +45,7 @@
   <li>Catalog</li>
   <li>Schema, Table, View, Volume</li>
   <li>Delta Table</li>
-  <li>Metastore</li> : Unity Catalog provides an account-level metastore that registers metadata about data, AI, and permissions about catalogs, schemas, and tables. Azure Databricks provides a legacy Hive metastore for customers that have not adopted Unity Catalog.
+  <li>Metastore</li> - Unity Catalog provides an account-level metastore that registers metadata about data, AI, and permissions about catalogs, schemas, and tables. Azure Databricks provides a legacy Hive metastore for customers that have not adopted Unity Catalog.
   <li>Catalog Explorer</li>
   <li>DBFS root</li>
   <li>Cluster</li>
