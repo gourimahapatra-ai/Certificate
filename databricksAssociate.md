@@ -152,7 +152,13 @@ Flatten schema or normalize data into multiple tables.
 #### 43. Triggered incremental ingestion, Lower cost, Higher Latency. Ingest same way as previous one 
 #### 44. Batch ingestion with manual incremental ingestion and Lower cost, Higher Latency
 #### 45. Single source of truth
-#### 46. 
+#### 46. liquid clustering for tables : liquid clustering for tables : Liquid clustering applies to both streaming tables and materialized views.
+<li>Tables that are often filtered by high cardinality columns.</li>
+<li>Tables that have skew in data distribution.</li>
+<li>Tables that grow quickly and require maintenance and tuning effort.</li>
+<li>Tables that have concurrent write requirements.</li>
+<li>Tables that have access patterns that change over time.</li>
+<li>Tables where a typical partition key could leave the table with too many or too few partitions.v
 #### 47. 
 #### 48. 
 #### 49. 
