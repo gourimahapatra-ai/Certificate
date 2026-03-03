@@ -1,6 +1,9 @@
 ## Databricks Associate
-#### 1. What is Azure Databricks?</r>
-#### 2. Data lakehouse
+#### 1. What is Azure Databricks?
+#### 2. Data lakehouse/lakehouse platform<img width="766" height="413" alt="image" src="https://github.com/user-attachments/assets/fa10f48c-c82b-4b1b-b9d7-117cb5a8c50e" />
+<img width="1132" height="667" alt="image" src="https://github.com/user-attachments/assets/b2487446-5329-4c24-883b-8d6b837449ed" />
+
+
 #### 3. Delta Lake (ACID transactions and schema enforcement)
 #### 4. Delta Sharing
 #### 5. MLFlow
@@ -106,31 +109,54 @@ Compute Plane : Serverless and Classic Computeplane
 Unity Catalog Metastore
 #### 28. ACID 
 Atomicity means that all transactions either succeed or fail completely.
-Consistency guarantees relate to how a given state of the data is observed by simultaneous operations.
+Data files are not tracked unless the transaction log records a new version. During a transaction, data files are written to the file directory backing the table. When the transaction completes, a new entry is committed to the transaction log that includes the paths to all files written during the transaction
+
+Consistency guarantees relate to how a given state of the data is observed by simultaneous operations. Delta Lake uses optimistic concurrency control to provide transactional guarantees between writes. writes operate in three stages.Read: Reads (if needed) the latest available version of the table to identify which files need to be modified (that is, rewritten). Write: Writes data files to the directory used to define the table. and Validate and commit: Checks whether the proposed changes conflict with any other changes that may have been concurrently committed since the snapshot that was read.
+If there are no conflicts, all the staged changes are committed as a new versioned snapshot, and the write operation succeeds.
+If there are conflicts, the write operation fails with a concurrent modification exception. This failure prevents corruption of data.
+
 Isolation refers to how simultaneous operations potentially conflict with one another.
-Durability means that committed changes are permanent.
-#### 29. 
-#### 30.
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10.
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10.
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10.
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10. 
-#### 10.
+
+Durability means that committed changes are permanent. databricks uses cloud storage has high availability and durability, Because transactions either succeed or fail completely and the transaction log lives alongside data files in cloud object storage, tables on Azure Databricks inherit the durability guarantees of the cloud object storage on which they're stored
+
+#### 29. snapshot isolation on reads 
+#### 30. write-serializable isolation on writes
+#### 31. MERGE INTO :  inserts, updates, and deletes against a table into a single write transaction
+#### 32. Does Delta Lake support multi-table transactions?
+#### 33. Primary key and foreign key relationships on Azure Databricks are informational and not enforced
+#### 34. Delta Lake prevents data corruption when multiple clusters write to the same table concurrently
+#### 35. I modify a Delta table from different workspaces
+#### 36. Medallion lakehouse architecture.
+#### 37. Bronze (raw)
+#### 38. Silver (validated) : Enforce data quality
+  The following operations are performed in silver tables:
+Schema enforcement
+Handling of null and missing values
+Data deduplication
+Resolution of out-of-order and late-arriving data issues
+Data quality checks and enforcement
+Schema evolution
+Type casting
+Joins
+#### 39. Gold (enriched) : 
+Consists of aggregated data tailored for analytics and reporting.
+Aligns with business logic and requirements.
+Is optimized for performance in queries and dashboards.
+#### 40. Multi-hop architectures <img width="769" height="407" alt="image" src="https://github.com/user-attachments/assets/bab5d5c2-dc0c-46b1-a20e-32a2f84c26a8" />
+#### 41. Start modeling data : How to represent heavily nested or semi-structured data.
+Use VARIANT data type.
+Use JSON strings.
+Create structs, maps, and arrays.
+Flatten schema or normalize data into multiple tables.
+#### 42. Continuous incremental ingestion, Higher cost, Latency Lower, Spark.readStrem
+#### 43. Triggered incremental ingestion, Lower cost, Higher Latency. Ingest same way as previous one 
+#### 44. Batch ingestion with manual incremental ingestion and Lower cost, Higher Latency
+#### 45. Single source of truth
+#### 46. 
+#### 47. 
+#### 48. 
+#### 49. 
+#### .
 #### 10. 
 #### 10. 
 #### 10. 
