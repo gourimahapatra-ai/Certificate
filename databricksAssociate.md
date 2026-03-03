@@ -101,9 +101,14 @@ Workspace
 Control Place : Present In databricks Account
 Compute Plane : Serverless and Classic Computeplane
 <img width="857" height="587" alt="image" src="https://github.com/user-attachments/assets/fd50e76a-7dc1-48c7-b155-9220cbda028f" />
+<img width="860" height="715" alt="image" src="https://github.com/user-attachments/assets/4f2177ea-8185-41a2-95ee-3eb6c0faf678" />
 
 Unity Catalog Metastore
-#### 28. 
+#### 28. ACID 
+Atomicity means that all transactions either succeed or fail completely.
+Consistency guarantees relate to how a given state of the data is observed by simultaneous operations.
+Isolation refers to how simultaneous operations potentially conflict with one another.
+Durability means that committed changes are permanent.
 #### 29. 
 #### 30.
 #### 10. 
