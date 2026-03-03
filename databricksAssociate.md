@@ -95,7 +95,14 @@
 #### 24. Workspace-catalog binding
 #### 25. DROP SCHEMA inventory_schema CASCADE
 #### 26. Volumes : When you work with volumes, you must use a SQL warehouse or a cluster running Databricks Runtime
-#### 27. 
+#### 27. Architecture 
+Account
+Workspace
+Control Place : Present In databricks Account
+Compute Plane : Serverless and Classic Computeplane
+<img width="857" height="587" alt="image" src="https://github.com/user-attachments/assets/fd50e76a-7dc1-48c7-b155-9220cbda028f" />
+
+Unity Catalog Metastore
 #### 28. 
 #### 29. 
 #### 30.
