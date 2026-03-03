@@ -37,7 +37,7 @@ Which scenario is best suited for using spot instances in Databricks? Spot insta
 **Question 6:** Automatic Liquid Clustering is designed to dynamically adapt to evolving and unpredictable query patterns by continuously reorganizing data based on recent query filters. This is especially beneficial when query predicates frequently change across multiple columns, making static strategies like partitioning or Z-ordering less effective.
 
 Partitioning works best when filters are stable and predictable, often on date/time columns. Z-ordering optimizes clustering for known high-cardinality columns with consistent filtering. When query filters are varied and unpredictable, Automatic Liquid Clustering provides the agility to improve performance without manual tuning.
-**Question 7:**
+**Question 7:** Cloudflare R2 removes egress costs, which helps significantly lower expenses when sharing data across cloud environments.
 **Question 8:**
 **Question 9:**
 **Question 2:**
